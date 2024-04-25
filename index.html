@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>title</title>
+    </head>
+    <body>
+        <body>
+           <div id="slidecontainer">
+                <div class="slide fade">
+                    <div class="number">1/3</div>
+                    <img src="img/img1.jpg" width="100%">
+                    <div class="text">Enjoy Your Holiday!</div>
+                </div>
+                <div class="slide fade">
+                    <div class="number">2/3</div>
+                    <img src="img/img2.jpg" width="100%">
+                    <div class="text">Enjoy Your Holiday!</div>
+                </div>
+                <div class="slide fade">
+                    <div class="number">3/3</div>
+                    <img src="img/img3.jpg" width="100%">
+                    <div class="text">Enjoy Your Holiday!</div>
+                </div>
+                <div id="prev">
+                    <a onclick="plusSlides(1)"><</a>
+                   
+                </div>
+                <div id="next">
+                    <a onclick="plusSlides(-1)">></a>
+                </div>
+                <div id="dots" sytle="text-align:center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+
+                </div>
+           </div>
+           
+           <div id="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="events.html">Events</a>
+                    <a id="right" href="contact.html">Contact Us</a>
+           </div>
+           <div id="row">
+                <div id="side">
+                    <h2>Hotel Rooms</h2>
+                    <h5>special rooms and excellenct services</h5>
+                    <div class="sidebox">
+                        <img src="img/room1.jpg" width="100%" height="200px">
+                    </div>
+                    <p>Beautifual and relixable rooms.</p>
+                    <h3>Laxury Rooms</h3>
+                    
+                    <div class="sideboxx">
+                        <img src="img/room2.jpg" width="100%" height="200px">
+                    </div><br/>
+                    <div class="sideboxx">
+                        <img src="img/room1.jpg" width="100%" height="200px">
+                    </div><br/>
+                    <div class="sideboxx">
+                        <img src="img/room2.jpg" width="100%" height="200px">
+                    </div>
+                </div>
+                <div id="main">
+                    <h2>TITLE HEADING</h2>
+		                 <h5>Title description, Dec 7, 2023</h5>
+                    <div class="sidebox">
+                      <img src="img/photo1.jpg" width="100%">
+                    </div>
+                    <p>Some text.</p>
+                    <p>sunt in clpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2,2023</h5>
+                    <div class="sidebox">
+                      <img src="img/photo2.jpg" width="100%">
+                    </div>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                </div>
+           </div>
+           <div id="footer"><p>© 2024 Your Company Name. All rights reserved.</p></div>
+           <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("slide");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            
+    </body>
+    <footer>
+
+    </footer>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>title</title>
+    </head>
+    <body>
+        <body>
+           <div id="slidecontainer">
+                <div class="slide fade">
+                    <div class="number">1/3</div>
+                    <img src="img/img1.jpg" width="100%">
+                    <div class="text">Enjoy Your Holiday!</div>
+                </div>
+                <div class="slide fade">
+                    <div class="number">2/3</div>
+                    <img src="img/img2.jpg" width="100%">
+                    <div class="text">Enjoy Your Holiday!</div>
+                </div>
+                <div class="slide fade">
+                    <div class="number">3/3</div>
+                    <img src="img/img3.jpg" width="100%">
+                    <div class="text">Enjoy Your Holiday!</div>
+                </div>
+                <div id="prev">
+                    <a onclick="plusSlides(1)"><</a>
+                   
+                </div>
+                <div id="next">
+                    <a onclick="plusSlides(-1)">></a>
+                </div>
+                <div id="dots" sytle="text-align:center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+
+                </div>
+           </div>
+           
+           <div id="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="events.html">Events</a>
+                    <a id="right" href="contact.html">Contact Us</a>
+           </div>
+           <!--Event Main Content-->
+           <h3 style="text-align:center;" class="heading">Events</h3>
+           <div class="row-1">
+            <div class="column">
+              <div class="events">
+                <img src="img/imgg1.jpg" width="100%">
+                <h3>My Work</h3>
+                <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="events">
+                <img src="img/imgg1.jpg" width="100%">
+                <h3>My Work</h3>
+                <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="events">
+                <img src="img/imgg1.jpg" width="100%">
+                <h3>My Work</h3>
+                <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="events">
+                <img src="img/imgg1.jpg" width="100%">
+                <h3>My Work</h3>
+                <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+              </div>
+            </div>
+           </div>
+           <div class="events">
+            <img src="img/photo1.jpg" width="100%">
+            <h3>Some Other Work</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+           </div>
+          
+           <!--Event Main Content-->
+           <div id="footer"><p>© 2024 Your Company Name. All rights reserved.</p></div>
+           <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("slide");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            
+    </body>
+    <footer>
+
+    </footer>
+</html>
